@@ -9,9 +9,25 @@ npm install --save-dev install-scripts
 ## CLI
 
 ```sh
-npx install-scripts
+% npx install-scripts
+fsevents
+  scripts:
+    install: node install
+  paths:
+    node_modules/fsevents/package.json
+puppeteer
+  scripts:
+    install: node install.js
+  paths:
+    node_modules/puppeteer/package.json
+styled-components
+  scripts:
+    postinstall: node ./scripts/postinstall.js || exit 0
+  paths:
+    node_modules/styled-components/package.json
+
 // or
-npx install-scripts path/to/project/node_modules
+% npx install-scripts path/to/project/node_modules
 ```
 
 ## Node API
@@ -21,7 +37,7 @@ const installScripts = require("install-scripts");
 (async () => {
   const result = await installScripts(target);
   Object.values(result).forEach(({ paths, scripts, name}) => {
-    console.log(name, scripts);
+    console.log(name, scripts, paths);
   });
 })();
 ```
