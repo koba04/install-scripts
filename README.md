@@ -11,6 +11,8 @@ npm install --save-dev install-scripts
 ## CLI
 
 ```sh
+# install dependencies without running scripts
+% npm install --ignore-scripts
 % npx install-scripts
 fsevents
   scripts:
