@@ -1,0 +1,27 @@
+{
+  "name": "install-scripts",
+  "version": "1.0.0",
+  "description": "disclose scripts running on `npm install`",
+  "bin": "bin.js",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "files": [
+    "index.js",
+    "bin.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/koba04/install-scripts.git"
+  },
+  "keywords": ["npm"],
+  "author": "koba04",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koba04/install-scripts/issues"
+  },
+  "homepage": "https://github.com/koba04/install-scripts#readme"
+}
