@@ -1,4 +1,6 @@
 # install-scripts
+[![](https://github.com/koba04/install-scripts/workflows/test/badge.svg)](https://github.com/koba04/install-scripts/actions?workflow=test)
+
 
 This package is to disclose scripts running on `npm install`.
 

@@ -45,7 +45,7 @@ module.exports = async target => {
   const packageJsonFiles = await readAllPackageJson(target, []);
   packageJsonFiles.forEach(packageJson => {
     const json = require(path.resolve(packageJson));
-    const packageName = packageJson.split(path.sep).reverse()[1];
+    const packageName = json.name;
     if (json.scripts) {
       ['install', 'postinstall'].forEach(script => {
         if (json.scripts[script]) {
@@ -55,7 +55,7 @@ module.exports = async target => {
             scripts: {}
           };
           result = {...result,
-            paths: result.paths.includes(packageName) ? result.paths : result.paths.concat(packageJson),
+            paths: result.paths.includes(packageJson) ? result.paths : result.paths.concat(packageJson),
             scripts: {...result.scripts, [script]: json.scripts[script]}
           }
           fileMap[packageName] = result;
