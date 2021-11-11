@@ -47,7 +47,7 @@ module.exports = async target => {
     const json = require(path.resolve(packageJson));
     const packageName = json.name;
     if (json.scripts) {
-      ['install', 'postinstall'].forEach(script => {
+      ['preinstall', 'install', 'postinstall'].forEach(script => {
         if (json.scripts[script]) {
           let result = fileMap[packageName] || {
             name: packageName,
