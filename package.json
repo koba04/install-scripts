@@ -1,6 +1,6 @@
 {
   "name": "install-scripts",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "disclose scripts running on `npm install`",
   "bin": "bin.js",
   "main": "index.js",
