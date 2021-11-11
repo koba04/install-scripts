@@ -10,6 +10,7 @@ const installScripts = require("./");
       "bar": {
         name: "bar",
         scripts: {
+          preinstall: "node bar-preinstall",
           install: "node bar-install",
           postinstall: "node bar-postinstall"
         },
